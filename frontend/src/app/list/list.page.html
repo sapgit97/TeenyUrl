@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+      <a href="/home" style="margin: 10px;"><img src="/assets/icon.png" alt="icon" width="30px" height="30px"/></a>
+      <ion-title>
+        Analytics
+      </ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4 style="padding: 25px;">Top {{topUrls?.length}} Url(s): </h4>
+
+  <ion-list>
+    <ion-item *ngFor="let url of topUrls; index as i">
+      <span style="padding: 20px;">{{i+1}}.</span>
+      <a href='{{url?.shortUrl}}' target="blank">{{url?.shortUrl}}</a>
+      <div class="item-note" slot="end">
+        Hits: {{url?.hits}}
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-row justify-content-between>
+      <ion-title>TeenyUrl</ion-title>
+      <p style="margin: 20px;">&copy; TeenyUrl, 2020</p>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,6 @@
+{
+    "mongoUrl": "mongodb+srv://shortener:shortener@cluster-3xzck.mongodb.net/test?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:9000",
+    "port": 9000,
+    "urlExpiry": 604800
+}
