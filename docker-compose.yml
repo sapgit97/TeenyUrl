@@ -1,0 +1,17 @@
+version: '3'
+services:
+    backend:
+        build: backend/
+        container_name: backend
+        network_mode: "host"
+        hostname: localhost
+        ports:
+        - 9000:9000
+
+    frontend:
+        build: frontend/
+        container_name: frontend
+        network_mode: "host"
+        hostname: localhost
+        ports:
+        - 8100:8100
